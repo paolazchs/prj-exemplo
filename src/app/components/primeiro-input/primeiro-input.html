@@ -1,0 +1,11 @@
+<!-- uso de propriedades especificas do angular para criar formularios reativos -->
+    
+    <div class="divisorForm">
+        <label [for]="inputName">{{ label }}</label>
+        <input 
+            [type]="type" 
+            [placeholder]="placeholder"
+            [value]="value"
+            (input)="onInput($event)"
+        />
+    </div>

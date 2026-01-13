@@ -1,0 +1,31 @@
+<app-login-layout
+    title="Login into your account "
+    primaryButtonText="Login Now"
+    secondaryButtonText="Sign Up Now"
+    (submit)="submit()"
+    (navigate)="navigate()"
+>
+<!-- usando o ng-content para exibir o formulario no component do login layout, aparece graças ao app-login-layout -->
+
+    <form [formGroup]="loginForm"> 
+
+        <app-primeiro-input
+            formControlName="email"
+            inputName="email"
+            type="email"
+            label="Email"
+            placeholder="Enter your email"
+        ></app-primeiro-input>
+        <app-primeiro-input
+            formControlName="password"
+            inputName="password"
+            type="password"
+            label="Your Password"
+            placeholder="Enter your password"
+        ></app-primeiro-input>
+    
+        <span>Forgot Password?</span>
+    </form>
+
+</app-login-layout>
+

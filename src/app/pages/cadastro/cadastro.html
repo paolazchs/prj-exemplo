@@ -1,0 +1,44 @@
+<app-login-layout
+    title="New here? Sign up now!"
+    primaryButtonText="Sign Up  Now"
+    secondaryButtonText="Login Now"
+    (submit)="submit()"
+    (navigate)="navigate()"
+>
+<!-- usando o ng-content para exibir o formulario no component do login layout, aparece graças ao app-login-layout -->
+
+    <form [formGroup]="cadastroForm"> 
+
+        <app-primeiro-input
+            formControlName="name"
+            inputName="name"
+            label=" Your Name"
+            type="text"
+            placeholder="Enter your name"   
+        ></app-primeiro-input>
+        <app-primeiro-input
+            formControlName="email"
+            inputName="email"
+            label="Email"
+            type="email"
+            placeholder="Enter your email"
+        ></app-primeiro-input>
+        <app-primeiro-input
+            formControlName="password"
+            inputName="password"
+            label="Password"
+            type="password"
+            placeholder="Enter your password"
+        ></app-primeiro-input>
+        <app-primeiro-input
+            formControlName="password"
+            inputName="passwordConfirmation"
+            label="Confirm your password"
+            type="password"
+            placeholder="Enter your password to confirm"
+        ></app-primeiro-input>
+    
+    </form>
+
+</app-login-layout>
+

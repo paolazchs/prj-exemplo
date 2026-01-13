@@ -1,0 +1,23 @@
+<main>
+    <section class="main-section">
+        <h2>Don't Wish It, SetupIt!</h2>
+        <img src="logo.svg"/>
+    </section>
+    <section class="form-section">
+        <h1>SetupIt!</h1>
+        <h3>{{ title }}</h3>
+        <ng-content></ng-content> <!-- Será o campo que ira aparecer o conteudo injetado dentro do forms no login.html -->
+        <div class="Bgap">
+            <button 
+            class="firstB" 
+            (click)="submit()"> {{ primaryButtonText }}</button>
+
+            <div class="divisor">
+                <div></div>
+                <span>or</span>
+                <div></div>
+            </div>
+            <button class="secondB"  (click)="navigate()">{{ secondaryButtonText }}</button>
+        </div>
+    </section>
+</main>
